@@ -100,6 +100,7 @@ img,
 picutre {
     max-width: 100%;
     display: block;
+    z-index: 0;
 }
 
 /* make form elements easier to work with */
@@ -256,6 +257,17 @@ select {
 /* ------------------- */
 
 
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: fixed;
+    background-color: hsl( var(--clr-white) );
+    width: 100%;
+}
+
+
+
+
 .primary-navigation {
     --gap: clamp(1.5rem, 5vw, 3.5rem);
     --underline-gap: 2rem;
@@ -264,11 +276,45 @@ select {
     margin: 0;
     background: hsl( var(--clr-white) / 0.05);
     backdrop-filter: blur(1.5rem);
-
-
-}
-.primary-navigation {
+    height: 55px;
     text-decoration: none;
     font-weight: 700;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
 
+}
+
+
+header img{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+
+.container-1 {
+    position: relative;
+}
+
+.text-over-img {
+    position: absolute;
+    bottom: 250px;
+    left: 16px;
+}
+
+.btn-over-img {
+    position: absolute;
+    bottom: 100px;
+    left: 160px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
